@@ -195,7 +195,7 @@ export const generateAIResult = createServerFn({ method: "POST" })
         user_id: userId,
         idea: data.idea,
         options: data,
-        result: story as unknown as Record<string, unknown>,
+        result: story as never,
         status: "completed",
       })
       .select("id")
